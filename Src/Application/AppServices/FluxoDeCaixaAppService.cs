@@ -101,8 +101,9 @@ namespace Application.AppServices
             IEnumerable<FluxoDeCaixa> responseModel = _fluxoDeCaixaService.Listar(new FluxoDeCaixa { Data = data });
             FluxoDeCaixaRelatorioConsolidadeDiarioResponseViewModel response = new()
             {
-                ValorTotalCredito = responseModel.Sum(where => where.FluxoDeCaixaTipoId = 1),
-                ValorTotalDebito = responseModel.Sum(where => where.FluxoDeCaixaTipoId = 2)
+                ValorTotalCredito = responseModel.Where(where => where.FluxoDeCaixaTipoId == 1).Sum(sum => sum.Valor),
+                ValorTotalDebito = responseModel.Where(where => where.FluxoDeCaixaTipoId == 2).Sum(sum => sum.Valor),
+                Data = data
             };
 
             return response;

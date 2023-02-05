@@ -8,16 +8,22 @@
 
         public decimal Valor { get; init; }
 
+        public DateTime Data { get; set; }
+
         public int IdUsuarioCadastro { get; set; }
     }
 
     public class FluxoDeCaixaEditarRequestViewModel
     {
+        public int Id { get; set; }
+
         public int FluxoDeCaixaTipoId { get; set; }
 
         public string? Descricao { get; init; }
 
         public decimal Valor { get; init; }
+
+        public DateTime Data { get; set; }
 
         public int IdUsuarioAlteracao { get; set; }
     }

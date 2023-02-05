@@ -57,7 +57,7 @@ namespace Infra.Dapper.Repositories
                                    IdUsuarioAlteracao, 
                                    DataAlteracao 
                             FROM FluxoDeCaixa 
-                            WHERE (Data = @Data or @Data is null)";
+                            WHERE (CONVERT (Date, Data, 1) = CONVERT (Date, @Data, 1) or @Data is null)";
             IEnumerable<FluxoDeCaixa> response = _unitOfWork.Connection.Query<FluxoDeCaixa>(sql, request);
             return response;
         }
