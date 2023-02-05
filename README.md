@@ -1,9 +1,9 @@
 ### Projeto
-- **Desenvolvido por:** Fernando JosÈ
-- **DescriÁ„o:**
-CriaÁ„o de uma api de Fluxo de Caixa com um relatÛrio consolidado di·rio
+- **Desenvolvido por:** Fernando Jos√©
+- **Descri√ß√£o:**
+Cria√ß√£o de uma api de Fluxo de Caixa com um relat√≥rio consolidado di√°rio
 
-### Padrıes e Tecnologias utilizadas
+### Padr√µes e Tecnologias utilizadas
 #### BackEnd
 - Net Core 6.0
 - DDD
@@ -13,7 +13,7 @@ CriaÁ„o de uma api de Fluxo de Caixa com um relatÛrio consolidado di·rio
 - UnitOfWork
 - IoC
 - C#
-- ExceptionMiddleware: Respons·vel por pegar e tratar todos os erros inesperados da aplicaÁ„o
+- ExceptionMiddleware: Respons√°vel por pegar e tratar todos os erros inesperados da aplica√ß√£o
 
 #### Testes de Unidade e Testes Integrados
 - XUnit
@@ -23,14 +23,24 @@ CriaÁ„o de uma api de Fluxo de Caixa com um relatÛrio consolidado di·rio
 #### Banco de dados
 - SQL Server
 
-### ConfiguraÁ„o
-#### PrÈ requisitos
+### Configura√ß√£o Inicial
+Configura√ß√£o necess√°ria antes de iniciar
+
+#### SqlServer
+- Criar um banco de dados a sua escolha (usei Arquitetura)
+- Executar o script de cria√ß√£o de tabelas e carga inicial que est√° na pasta Docs/SqlServer/ConfiguracaoInicial
+
+#### BackEnd
+- Alterar a connection string no arquivo appsettings.json com a conn que estiver usando
+
+### Configura√ß√£o
+#### Pr√© requisitos
 - Net Core 6.0
 - Sql Server
 
 #### BackEnd
 - Abrir Terminal
-- Acessar a pasta onde est· o projeto
+- Acessar a pasta onde est√° o projeto
 - Acessar a pasta .\Src\Api
 - dotnet restore
 - dotnet build
@@ -38,21 +48,11 @@ CriaÁ„o de uma api de Fluxo de Caixa com um relatÛrio consolidado di·rio
 
 #### Testes de Unidade
 - Abrir Terminal
-- Acessar a pasta onde est· o projeto
+- Acessar a pasta onde est√° o projeto
 - Acessar a pasta .\Src\UnitTest
 - dotnet restore
 - dotnet build
 - dotnet test
-
-### ConfiguraÁ„o Inicial
-ConfiguraÁ„o necess·ria antes de iniciar
-
-#### SqlServer
-- Criar um banco de dados a sua escolha (user Arquitetura)
-- Executar o script de criaÁ„o de tabelas e carga inicial que est· na pasta Docs/SqlServer/ConfiguracaoInicial
-
-#### BackEnd
-- Alterar a connection string no arquivo appsettings.json com a conn que estiver usando
 
 ### Ambientes
 
